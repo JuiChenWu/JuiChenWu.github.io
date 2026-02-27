@@ -1,1 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吳瑞宸 JuiChenWu | Portfolio</title>
+    <style>
+        /* 乾淨簡約的明亮風設計 */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #fafafa;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        header {
+            margin-bottom: 50px;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 30px;
+        }
+        h1 {
+            font-size: 2.2em;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .bio {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        section {
+            margin-bottom: 50px;
+        }
+        h2 {
+            font-size: 1.4em;
+            color: #111;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #fff;
+            padding: 25px;
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        .card p {
+            color: #555;
+            font-size: 0.95em;
+            margin: 0;
+        }
+        .tag {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #444;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-right: 5px;
+            margin-top: 10px;
+        }
+        .contact-links a {
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            color: #4a4a4a;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .contact-links a:hover {
+            color: #000;
+            border-bottom: 1px solid #000;
+        }
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
 
+<div class="container">
+    <header>
+        <h1>吳瑞宸 (JuiChenWu)</h1>
+        <div class="bio">
+            你好，我是吳瑞宸，目前是一名資工系大一學生。<br>
+            熱愛寫程式並持續在做中學，平時會透過解題與實作不同類型的專案來累積實務經驗。
+        </div>
+        <div class="contact-links">
+            <a href="https://github.com/JuiChenWu" target="_blank">GitHub (Main)</a>
+            <a href="https://github.com/chanaaaaaaa" target="_blank">GitHub (Dev)</a>
+            <a href="mailto:king960129@gmail.com">Email</a>
+            <a href="https://www.instagram.com/_wrcccc_/" target="_blank">Instagram</a>
+            <a href="https://vjudge.net/user/skmydic" target="_blank">VirtualJudge</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>C / C++</h3>
+                <p>主要用於演算法學習與資料結構實作，平時透過競技程式解題來鍛鍊邏輯思維與程式效能掌控能力。</p>
+            </div>
+            <div class="card">
+                <h3>Python</h3>
+                <p>具備撰寫自動化腳本、API 串接與聊天機器人開發的能力，能靈活運用於日常作業與小工具實作。</p>
+            </div>
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>熟悉基礎的網頁前後端架構，能使用 Flask 框架搭配 HTML / CSS / JavaScript 進行簡單的系統開發。</p>
+            </div>
+            <div class="card">
+                <h3>AI / Machine Learning</h3>
+                <p>曾初步接觸 PyTorch，具備套用預訓練模型（如 ResNet50）進行影像特徵提取與相似度計算的經驗。</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Selected Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>AI Image Similarity Search</h3>
+                <p>使用 Flask 建立的影像搜尋系統。後端結合 PyTorch 與 ResNet50 模型提取特徵，搭配 SQLite 儲存資料，實現基礎的相似圖片比對功能。</p>
+                <div class="tag">Python</div>
+                <div class="tag">Flask</div>
+                <div class="tag">PyTorch</div>
+            </div>
+            <div class="card">
+                <h3>Line Bot 資訊整合機器人</h3>
+                <p>以 Python 實作的 Line 機器人，嘗試串接多種外部 API，規劃提供公車、YouBike、天氣與地震等便利的生活資訊。</p>
+                <div class="tag">Python</div>
+                <div class="tag">Line Messaging API</div>
+            </div>
+            <div class="card">
+                <h3>Algorithm & Code Library</h3>
+                <p>整理平時撰寫的 Python 作業、自動化腳本，以及使用 C++ 實作的演算法練習筆記，作為個人程式碼的資源庫。</p>
+                <div class="tag">C++</div>
+                <div class="tag">Python</div>
+                <div class="tag">Jupyter Notebook</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 吳瑞宸 JuiChenWu. All rights reserved.
+    </footer>
+</div>
+
+</body>
+</html>
