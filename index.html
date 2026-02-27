@@ -56,10 +56,19 @@
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.02);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            height: 100%; /* 確保卡片內容等高 */
+            box-sizing: border-box;
         }
-        .card:hover {
+        /* 針對整個卡片作為連結的樣式設定 */
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .card-link:hover .card {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-color: #ccc;
         }
         .card h3 {
             margin-top: 0;
@@ -146,26 +155,34 @@
     <section>
         <h2>Selected Projects</h2>
         <div class="grid">
-            <div class="card">
-                <h3>AI Image Similarity Search</h3>
-                <p>使用 Flask 建立的影像搜尋系統。後端結合 PyTorch 與 ResNet50 模型提取特徵，搭配 SQLite 儲存資料，實現基礎的相似圖片比對功能。</p>
-                <div class="tag">Python</div>
-                <div class="tag">Flask</div>
-                <div class="tag">PyTorch</div>
-            </div>
-            <div class="card">
-                <h3>Line Bot 資訊整合機器人</h3>
-                <p>以 Python 實作的 Line 機器人，嘗試串接多種外部 API，規劃提供公車、YouBike、天氣與地震等便利的生活資訊。</p>
-                <div class="tag">Python</div>
-                <div class="tag">Line Messaging API</div>
-            </div>
-            <div class="card">
-                <h3>Algorithm & Code Library</h3>
-                <p>整理平時撰寫的 Python 作業、自動化腳本，以及使用 C++ 實作的演算法練習筆記，作為個人程式碼的資源庫。</p>
-                <div class="tag">C++</div>
-                <div class="tag">Python</div>
-                <div class="tag">Jupyter Notebook</div>
-            </div>
+            <a href="https://github.com/chanaaaaaaa/WebFinalProject" target="_blank" class="card-link">
+                <div class="card">
+                    <h3>AI Image Similarity Search</h3>
+                    <p>使用 Flask 建立的影像搜尋系統。後端結合 PyTorch 與 ResNet50 模型提取特徵，搭配 SQLite 儲存資料，實現基礎的相似圖片比對功能。</p>
+                    <div class="tag">Python</div>
+                    <div class="tag">Flask</div>
+                    <div class="tag">PyTorch</div>
+                </div>
+            </a>
+            
+            <a href="https://github.com/chanaaaaaaa/line-bot" target="_blank" class="card-link">
+                <div class="card">
+                    <h3>Line Bot 資訊整合機器人</h3>
+                    <p>以 Python 實作的 Line 機器人，嘗試串接多種外部 API，規劃提供公車、YouBike、天氣與地震等便利的生活資訊。</p>
+                    <div class="tag">Python</div>
+                    <div class="tag">Line Messaging API</div>
+                </div>
+            </a>
+
+            <a href="https://github.com/chanaaaaaaa/CodeLib" target="_blank" class="card-link">
+                <div class="card">
+                    <h3>Algorithm & Code Library</h3>
+                    <p>整理平時撰寫的 Python 作業、自動化腳本，以及使用 C++ 實作的演算法練習筆記，作為個人程式碼的資源庫。</p>
+                    <div class="tag">C++</div>
+                    <div class="tag">Python</div>
+                    <div class="tag">Jupyter Notebook</div>
+                </div>
+            </a>
         </div>
     </section>
 
